@@ -6,7 +6,7 @@
   <% queue_names.each do |queue_name| %>
   <tr>
     <td class="queue"><%= link_to queue_name, queue_path(queue_name) %></td>
-    <td class="size"><%= queue_size(queue_name) %></td>
+    <td class="size"><%= number_with_precision(queue_size(queue_name)) %></td>
   </tr>
   <% end %>
 
